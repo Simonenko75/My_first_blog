@@ -5,28 +5,14 @@
     <body>
         <h1>Hi there!</h1>
         <p>It works!</p>
-        <strong>kladfjklabfkj</strong><br>
-        <em>fkjwhojncjkdsdshf</em><br>
-        <ul>
-            <li>oweinfdfk</li>
-            <li>ldfkjlakjfklafjlsafo</li>
-            <li>sdkjfhksjahfk</li>
-        </ul>
         <div>
-            kadsjfewhf
-            akjdahf'af
-            afkhelw
-            faljfkha
-            fakdl'f
-            afkjasf'ahf;kad;f
-            af'af
-            asf;kjaf
-            afh;af
-            afhskdjaljfsldjf
-            a
-        </div>
-        <div>
-            <h1><a href="https://github.com">Django blog</a></h1>
+            {% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                </div>
+                <p>{{ post.text|linebreaksbr }}</p>
+            {% endfor %}
         </div>
     </body>
 </html>
